@@ -1,0 +1,11 @@
+<h3><%= link_to "Новая статья!", new_article_path %></h3>
+<hr>
+
+<% @articles.each do |article| %>
+  <h3><%= article.title %></h3>
+  <p><%= article.text %></p>
+  <p><%= article.created_at %></p>
+  <p><%= link_to  "Show article", article_path(article) %> |
+ <%= link_to "Delete article", article_path(article), method: :delete, data: { confirm: 'Действительно удалить?'} %></p>
+  <hr>
+<% end %>

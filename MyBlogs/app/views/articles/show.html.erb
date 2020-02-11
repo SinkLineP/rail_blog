@@ -1,0 +1,12 @@
+<%= link_to "All articles", articles_path %>
+
+
+
+<h1><%= @article.title %></h1>
+
+<p><%= @article.text %></p>
+<p><%= @article.created_at %></p>
+
+ <%= link_to  "Edit article", edit_article_path(@article) %> |
+ <%= link_to "Delete article", article_path(@article), method: :delete, data: { confirm: 'Действительно удалить?'} %>
+
