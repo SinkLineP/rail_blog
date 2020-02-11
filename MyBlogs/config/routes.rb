@@ -8,5 +8,7 @@ Rails.application.routes.draw do
 
   get 'contacts' => 'contacts#new'
   resources :contacts, only: [:create]
-  resources :articles
+  resources :articles do
+  	resources :comments
+  end
 end
