@@ -11,7 +11,7 @@
  <%= link_to "Delete article", article_path(@article), method: :delete, data: { confirm: 'Действительно удалить?'} %>
 
 <hr>
-<h3>All Comments:</h3>
+<h3>All Comments: </h3>
 <hr>
 <h2>Add Comment</h2>
 <%= form_for ([@article, @article.comments.build]) do |f| %>
