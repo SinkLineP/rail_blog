@@ -12,6 +12,19 @@
 
 <hr>
 <h3>All Comments: </h3>
+<% @article.comments.each do |comment| %>
+  <p>
+    <strong>Author:</strong>
+    <%= comment.author %>
+  </p>
+
+  <p>
+    <strong>Text:</strong>
+    <%= comment.body %>
+  </p>
+  <p>-----------------------------</p>
+<% end %>
+
 <hr>
 <h2>Add Comment</h2>
 <%= form_for ([@article, @article.comments.build]) do |f| %>
