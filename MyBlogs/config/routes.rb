@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-  root to: "articles#index"
+  devise_for :users
+	root to: "home#index"
  
   get 'about/new'
   get 'terms/new'
