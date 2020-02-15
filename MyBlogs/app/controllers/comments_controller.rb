@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
 	
-  http_basic_authenticate_with name: "dhh", password: "secrets", only: :destroy
+  before_action :authenticate_user!, :only => [:create]
 
 	def create
 		@article = Article.find(params[:article_id])

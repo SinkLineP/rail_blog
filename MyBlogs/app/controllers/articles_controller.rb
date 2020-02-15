@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
 
-	before_action :authenticate_user!
+	before_action :authenticate_user!, :only => [:new, :create, :edit, :update, :destroy]
 	  # http_basic_authenticate_with name: "dhh", password: "secrets", except: [:index, :show]
 
   def index
