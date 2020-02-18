@@ -12,11 +12,11 @@
     <body>
 
       <% if user_signed_in? %>
-      <i>Hello, </i><b><%= current_user.username %></b> | <%= link_to "Sign_Out!", destroy_user_session_path, method: :delete %>
+      <i>Hello, </i><b><%= current_user.username %></b> | <%= link_to "Sign_Out!", destroy_user_session_path, method: :delete %>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<%= link_to "All articles", articles_path %>
       <% else %>
       <%= link_to "Sign_In!", new_user_session_path %> 
       <% end %>
-      
+      <hr />
       <br />
       <br />
 
