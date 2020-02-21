@@ -12,9 +12,9 @@
     <body>
 
       <% if user_signed_in? %>
-      <i>Hello, </i><b><%= current_user.username %></b> | <%= link_to "Sign_Out!", destroy_user_session_path, method: :delete %>...<%= link_to "All articles", articles_path %>...    
+      <i>Hello, </i><b><%= current_user.username %></b> | <%= link_to "Sign_Out!", destroy_user_session_path, method: :delete, :class => 'btn btn-secondary btn-xs' %>|<%= link_to "All articles", articles_path, :class => 'btn btn-success' %>    
       <% else %>
-      <%= link_to "Sign_In!", new_user_session_path %> 
+      <%= link_to "Sign_In!", new_user_session_path, :class => 'btn btn-info' %> 
       <% end %>
       <hr />
       <br />
