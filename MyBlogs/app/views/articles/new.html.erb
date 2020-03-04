@@ -1,4 +1,17 @@
-<div class="container">	
+<div class="container">
+
+	<h2>New Article</h2>
+
+	<p>
+		<% if @article && @article.errors.any? %>
+	    <ul>
+	      <% @article.errors.full_messages.each do |msg| %>
+	        <i><li style="color: red;"><%= msg %></li></i>
+	      <% end %>
+	    </ul>
+	  <% end %>
+	</p>
+
 	<%= simple_form_for :article, url: articles_path do |f| %>
 	  <div class="popa">
 	  	<%= f.input :title,
@@ -6,7 +19,6 @@
 	  							autofocus: true,
 	  							input_html: {
 	  							class: 'form-control',
-	  							placeholder: "title",
 	  							autocomplete: "title"}
 	  	%>
 	  </div>
