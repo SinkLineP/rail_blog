@@ -8,3 +8,12 @@ def sign_up
 
   click_button 'Sign up'
 end
+
+def create_new_article
+  visit new_article_path
+
+  fill_in :article_title, with: 'Hello!'
+  fill_in :article_text, with: 'Hello user'
+
+  click_button('Опубликовать')
+end  

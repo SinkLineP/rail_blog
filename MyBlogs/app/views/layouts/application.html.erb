@@ -27,6 +27,7 @@
           <%= link_to "All articles", articles_path, :class => 'btn btn-success' %> 
           <%= link_to "Contact", contacts_path, :class => 'btn btn-warning' %> 
             <% else %>
+          <%= link_to "Sign_Up!", new_user_registration_path, :class => 'btn btn-primary' %>  
           <%= link_to "Sign_In!", new_user_session_path, :class => 'btn btn-info' %>   
           <%= link_to "Contact", contacts_path, :class => 'btn btn-warning' %> 
           <% end %>

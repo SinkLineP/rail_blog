@@ -1,5 +1,7 @@
 Rails.application.configure do
 
+config.hosts.clear
+
 config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -62,3 +64,5 @@ config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 end
+
+
